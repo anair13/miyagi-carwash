@@ -2,7 +2,8 @@ angular
     .module('AngularRails', [
         'ngRoute',
         'templates',
-        'ngDialog'
+        'ngDialog',
+        'ngMap'
     ]).config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {

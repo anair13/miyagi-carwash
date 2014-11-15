@@ -4,4 +4,8 @@ angular.module('AngularRails').controller('HomeCtrl', function ($scope, ngDialog
         console.log("hi");
         ngDialog.open({ template: 'popupTmpl.html' });
     };
+
+    $scope.$on('mapInitialized', function(event, map) {
+        
+    });
 });
