@@ -12,15 +12,7 @@
       }
     </style>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <script src="/assets/jquery.js?body=1"></script>
-  <script src="/assets/jquery_ujs.js?body=1"></script>
-  <script src="/assets/angular/angular.js?body=1"></script>
-  <script src="/assets/angular-route/angular-route.js?body=1"></script>
-  <script src="/assets/angular-rails-templates.js?body=1"></script>
-  <script src="/assets/home.js?body=1"></script>
-  <script src="/assets/ng-app/app.js?body=1"></script>
-  <script src="/assets/ng-app/home.js?body=1"></script>
-  <script src="/assets/application.js?body=1"></script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing"></script>
   <%= csrf_meta_tags %>
 
@@ -56,7 +48,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 <body ng-app="AngularRails">
 
-<div id="map-canvas"></div>
+<div ng-click="mapclick()" id="map-canvas"></div>
 
 <%= yield %>
 

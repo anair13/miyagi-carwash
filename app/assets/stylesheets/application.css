@@ -11,7 +11,34 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require ngDialog.min
  *= require_self
  */
 
-.angular-google-map-container { height: 400px; }
+#mybutton {
+  position:absolute;
+  bottom:2%;
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 11px;
+
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  alignment-baseline:central;
+  width:30%;
+  left:35%;
+  text-align:center;
+  text-decoration:none;
+
+
+  margin:0px auto;
+}
+
+#mybutton:hover {
+  background-color:#3B6EC2;
+}
