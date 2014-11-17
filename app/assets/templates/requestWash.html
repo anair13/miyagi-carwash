@@ -1,3 +1,4 @@
+<div ng-controller="FormCtrl">
 <center>
 <h1>Welcome to Mr. Miyagi!</h1>
 
@@ -8,6 +9,7 @@
         <input type="text" ng-model="plate" class="pure-input-1-2" placeholder="License Plate">
     </fieldset>
 
-    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Wash My Car!</button>
+    <button type="submit" ng-click="onRequestWash()" class="pure-button pure-input-1-2 pure-button-primary">Wash My Car!</button>
 </form>
 </center>
+</div>
