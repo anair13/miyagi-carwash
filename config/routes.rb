@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :feedbacks
+
+  resources :washes
+
   root 'application#index'
   get '*path' => 'application#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,29 @@
+<h1>Listing washes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Plate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @washes.each do |wash| %>
+      <tr>
+        <td><%= wash.email %></td>
+        <td><%= wash.address %></td>
+        <td><%= wash.plate %></td>
+        <td><%= link_to 'Show', wash %></td>
+        <td><%= link_to 'Edit', edit_wash_path(wash) %></td>
+        <td><%= link_to 'Destroy', wash, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wash', new_wash_path %>

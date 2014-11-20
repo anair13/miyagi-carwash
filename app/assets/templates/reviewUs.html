@@ -9,7 +9,7 @@ What did you think?
         <span ng-repeat="rating in ratings">
         <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>
         </span>
-        <input type="text" ng-model="address" class="pure-input-1-2" placeholder="Feedback">
+        <input type="text" ng-model="comment" class="pure-input-1-2" placeholder="Feedback">
     </fieldset>
 
     <button type="submit" ng-click="onDone()" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>

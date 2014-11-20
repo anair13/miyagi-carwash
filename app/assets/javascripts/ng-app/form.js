@@ -1,10 +1,14 @@
-angular.module('AngularRails').controller('FormCtrl', function ($scope, ngDialog) {
+angular.module('AngularRails').controller('FormCtrl', function ($scope, $http, ngDialog) {
     $scope.ratings = [{
         current: 3,
         max: 5
     }]
 
     $scope.onRequestWash = function () {
+        data = {email: $scope.email, address: $scope.address, plate: $scope.plate}
+        $http.post('/washes/', data).success(function(data) {
+            console.log(data);
+        });
         ngDialog.close();
         ngDialog.open({ template: 'waiting.html' });
     };
@@ -15,6 +19,10 @@ angular.module('AngularRails').controller('FormCtrl', function ($scope, ngDialog
     };
 
     $scope.onDone = function () {
+        data = {stars: "3", comment: $scope.comment}
+        $http.post('/feedbacks/', data).success(function(data) {
+            console.log(data);
+        });
         ngDialog.close();
         ngDialog.open({ template: 'thanks.html' });
     };

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @wash.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @wash.address %>
+</p>
+
+<p>
+  <strong>Plate:</strong>
+  <%= @wash.plate %>
+</p>
+
+<%= link_to 'Edit', edit_wash_path(@wash) %> |
+<%= link_to 'Back', washes_path %>
